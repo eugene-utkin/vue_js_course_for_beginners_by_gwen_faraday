@@ -14,10 +14,13 @@
       .box.three {
         background-color: blue;
       }
+      [v-cloak] {
+        display: none;
+      }
     </style>
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-cloak>
       {{ greeting }}
       <input v-model="greeting" />
 
@@ -35,7 +38,7 @@
           return {
             greeting: "Hello Vue 3!",
             isVisible: false,
-            isVisible2: false,
+            isVisible2: true,
           };
         },
       });
