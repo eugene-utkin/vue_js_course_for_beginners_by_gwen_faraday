@@ -46,6 +46,15 @@
           },
         },
       });
+
+      app.component("custom-form", {
+        template: `
+          <div>
+            <input type="email" />
+            <input type="password" />
+          </div>
+        `,
+      });
       app.mount("#app");
     </script>
   </body>
