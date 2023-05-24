@@ -21,7 +21,7 @@
   </head>
   <body>
     <div id="app" v-cloak>
-      <custom-form />
+      <login-form />
       <hr />
 
       <button @click.enter="toggleBox">Toggle Box</button>
@@ -47,7 +47,7 @@
         },
       });
 
-      app.component("custom-form", {
+      app.component("login-form", {
         template: `
           <div>
             <input type="email" />
