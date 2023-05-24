@@ -53,7 +53,7 @@
 
       app.component("login-form", {
         template: `
-          <form @submit="handleSubmit">
+          <form @submit.prevent="handleSubmit">
             <h1>{{ title }}</h1>
             <input type="email" />
             <input type="password" />
