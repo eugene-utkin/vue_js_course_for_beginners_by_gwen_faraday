@@ -53,16 +53,21 @@
 
       app.component("login-form", {
         template: `
-          <div>
+          <form @submit="handleSubmit">
             <h1>{{ title }}</h1>
             <input type="email" />
             <input type="password" />
-          </div>
+          </form>
         `,
         data() {
           return {
             title: "Login Form",
           };
+        },
+        methods: {
+          handleSubmit() {
+            console.log("submitted");
+          },
         },
       });
       app.mount("#app");
