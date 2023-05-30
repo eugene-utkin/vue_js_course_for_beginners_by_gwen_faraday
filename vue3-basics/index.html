@@ -55,7 +55,6 @@
         template: `
           <form @submit.prevent="handleSubmit">
             <h1>{{ title }}</h1>
-            <p v-for="(str, i) in inputs" :key="str">{{ str }}</p>
             <custom-input v-model="email" :label="emailLabel" />
             <custom-input v-model="password" :label="passwordLabel" />
             <button>Log in</button>
@@ -65,7 +64,18 @@
         data() {
           return {
             title: "Login Form",
-            inputs: ["email", "password", "name"],
+            inputs: [
+              {
+                label: "Email",
+                value: "",
+                type: "email",
+              },
+              {
+                label: "Password",
+                value: "",
+                type: "password",
+              },
+            ],
             email: "",
             password: "",
             emailLabel: "Email",
