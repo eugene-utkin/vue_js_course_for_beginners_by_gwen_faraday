@@ -143,6 +143,8 @@
         </div>
       </main>
 
+      <sidebar v-if="showSidebar" />
+
       <footer></footer>
     </div>
 
@@ -151,6 +153,7 @@
       let app = Vue.createApp({
         data() {
           return {
+            showSidebar: false,
             inventory: {
               carrots: 0,
               pineapple: 0,
